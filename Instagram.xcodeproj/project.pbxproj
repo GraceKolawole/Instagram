@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -203,6 +203,7 @@
 				959DE74C286A47AD00B04D28 /* Sources */,
 				959DE74D286A47AD00B04D28 /* Frameworks */,
 				959DE74E286A47AD00B04D28 /* Resources */,
+				7331C90A9A758675765281FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,7 +222,6 @@
 				959DE76A286A47AF00B04D28 /* Sources */,
 				959DE76B286A47AF00B04D28 /* Frameworks */,
 				959DE76C286A47AF00B04D28 /* Resources */,
-				95EFB24E93F482CD232D8559 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,13 +358,13 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95EFB24E93F482CD232D8559 /* [CP] Copy Pods Resources */ = {
+		7331C90A9A758675765281FE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-InstagramTests/Pods-InstagramTests-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Instagram/Pods-Instagram-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -373,7 +373,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstagramTests/Pods-InstagramTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Instagram/Pods-Instagram-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C5795D4E7D5DF016F02FA62B /* [CP] Check Pods Manifest.lock */ = {

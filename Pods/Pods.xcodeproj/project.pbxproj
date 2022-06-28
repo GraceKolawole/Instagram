@@ -41,7 +41,8 @@
 		15076169BA0ACF06EE936BDE997025D1 /* ParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47834B4D26801D64581EF512D52C3FB2 /* ParseManager.m */; };
 		15250959F91132EF31B89FEDD86840F3 /* PFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C1C50AD1491762A8670259014EBE35A /* PFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		152746B7393EAD415938AC045E605BE7 /* PFUserPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = F4BD55D6C470F21F724A66B430669D2A /* PFUserPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		16E5763488C868BD840F2DFFE632F75D /* Pods-Instagram-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1351D4FE2951E5DB43B96A3BE5CCE34 /* Pods-Instagram-dummy.m */; };
+		1668A80E928DAE92D750D698D264DD4C /* Pods-Instagram-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1351D4FE2951E5DB43B96A3BE5CCE34 /* Pods-Instagram-dummy.m */; };
+		1736F2F30848F65EB6098D70AF008B1E /* Pods-InstagramTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70101074DAA7EA5436F66839A24EF14B /* Pods-InstagramTests-dummy.m */; };
 		180AA0E312E427718C0B0AAB072D21D1 /* PFAnonymousAuthenticationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = E76387AEBCD368FC670B0D76A2F95CA0 /* PFAnonymousAuthenticationProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		183573EA980D812CB631B752BA1576D6 /* PFObjectEstimatedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F02B8F9E310973F464643DB8C4EB289 /* PFObjectEstimatedData.m */; };
 		18B521DF83F8630B19922FD09A280913 /* PFMultiProcessFileLock.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC88B3EB330432CE29A57B0C782ED94 /* PFMultiProcessFileLock.m */; };
@@ -163,7 +164,6 @@
 		5C137FF2DFD082ED35F91D70A51C1BC3 /* PFTaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D50A4527D8E035DE5CF645F4E38B312 /* PFTaskQueue.m */; };
 		5D20BAD93669C70A80EE4F42F2610444 /* PFGeoPointPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A5A157C047C63A052E777159DBDE7DDA /* PFGeoPointPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5D500B0E8F67A705FA2A473E8FDF04A2 /* PFConfigController.h in Headers */ = {isa = PBXBuildFile; fileRef = EEEDA0AD783E03E31047C1BD91273DCA /* PFConfigController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5DB6C2BEF2E78EE3E6815B44F3E18FEC /* Pods-InstagramTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70101074DAA7EA5436F66839A24EF14B /* Pods-InstagramTests-dummy.m */; };
 		5DBFBCE40525B35CE7A1054F09193A0F /* PFPinningEventuallyQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1DEFFA41AD0C09D665A837FA0D0445 /* PFPinningEventuallyQueue.m */; };
 		5E1F2934D0488B89DC28E78DAD74EE55 /* PFACLState_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FD358B36713DAAE36AA56D1B859B62F /* PFACLState_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5EAF393486A7F7D361D1EEB0B7F0790B /* PFRESTObjectBatchCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = FACC560748A943F32D9B10EBCAA68785 /* PFRESTObjectBatchCommand.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -415,26 +415,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		29455B6391269B925D9C994B8E42788B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 17AAF97ED69CFEDD163BC1796F5FA3BC;
-			remoteInfo = "Pods-Instagram";
-		};
-		392CDF6EA803ADB685D3ABB973626B96 /* PBXContainerItemProxy */ = {
+		59EA803D8065DEEC1939FEFFE8521ABC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 26BF235B420589570D8C83E44CF0C52A;
 			remoteInfo = Bolts;
 		};
-		81C53062AB431F652E866AB51DE21821 /* PBXContainerItemProxy */ = {
+		73FD4283066F983C8F42D1E4DDA74CF9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D6EF2EE752CB215D9DD3C027899301FC;
 			remoteInfo = Parse;
+		};
+		8649A8E9ABF0463CFFB780431B75BF58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B31E9474BF0BC542BCAD9B97B60E9C46;
+			remoteInfo = "Pods-Instagram";
 		};
 		CD4345D2753851640EB6BC0144824B48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -447,7 +447,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 17AAF97ED69CFEDD163BC1796F5FA3BC;
+			remoteGlobalIDString = B31E9474BF0BC542BCAD9B97B60E9C46;
 			remoteInfo = "Pods-Instagram";
 		};
 		DA24EEB497FB77299D9969EF98546C50 /* PBXContainerItemProxy */ = {
@@ -919,14 +919,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB94EBEEBF7C5BAC17667331EBD3DF0D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4EF80E951AA70E30034D9EC3351AEEF /* Frameworks */ = {
+		BB6DA4BF194AF29D388A774EDEEECCF8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -945,6 +938,13 @@
 				13B84F490406AEB439B81BD1600FE617 /* Security.framework in Frameworks */,
 				F07FF48AF2B54B6681019493D582D3B7 /* StoreKit.framework in Frameworks */,
 				EB4ACB487F4E11C4ED9608D36F256330 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEB04AF768BA3F2C9BB635D610825F65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1768,22 +1768,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		17AAF97ED69CFEDD163BC1796F5FA3BC /* Pods-Instagram */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AC3FB6C9071AAE4CE24323144A4F9131 /* Build configuration list for PBXNativeTarget "Pods-Instagram" */;
-			buildPhases = (
-				D64F2DDDD3BD7950E74D16FA7AD47EF5 /* Sources */,
-				C4EF80E951AA70E30034D9EC3351AEEF /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-Instagram";
-			productName = "Pods-Instagram";
-			productReference = E0ACD4CD950EFC3866036D8E66A476F5 /* libPods-Instagram.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		26BF235B420589570D8C83E44CF0C52A /* Bolts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02F092A76E5188AD101DD30E8EEB9E20 /* Build configuration list for PBXNativeTarget "Bolts" */;
@@ -1799,6 +1783,23 @@
 			name = Bolts;
 			productName = Bolts;
 			productReference = 16576A0D3B832633447EA8CD3E2E8883 /* libBolts.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		66EEBAB671C1F1E9F0E5617A02259B1B /* Pods-InstagramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B40781DF8E498D958481F60E7C2D2518 /* Build configuration list for PBXNativeTarget "Pods-InstagramTests" */;
+			buildPhases = (
+				B12187707F47BF4A6A23E6B2141143FC /* Sources */,
+				EEB04AF768BA3F2C9BB635D610825F65 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E243F644A44BB08048DBB70916031E69 /* PBXTargetDependency */,
+			);
+			name = "Pods-InstagramTests";
+			productName = "Pods-InstagramTests";
+			productReference = D5B0FDC238341E9C607178E4AB12CC26 /* libPods-InstagramTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		7280F5058E71F852EC60F38DC3F8F09E /* Parse-Parse */ = {
@@ -1835,23 +1836,22 @@
 			productReference = C0748F3C967D87F1A4C3F05220C8D237 /* libPods-InstagramUITests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		C28A8D46A780965598A41AB4D9E0AC6D /* Pods-InstagramTests */ = {
+		B31E9474BF0BC542BCAD9B97B60E9C46 /* Pods-Instagram */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 409D937D7A0AF62F1573B7DFC00D54ED /* Build configuration list for PBXNativeTarget "Pods-InstagramTests" */;
+			buildConfigurationList = CF77771D6E29CF276E7258E107C7C491 /* Build configuration list for PBXNativeTarget "Pods-Instagram" */;
 			buildPhases = (
-				1B9226A7BDEE3AE6FDCFFD55CF7C8A75 /* Sources */,
-				AB94EBEEBF7C5BAC17667331EBD3DF0D /* Frameworks */,
+				2A111A0E7E24EC224BECAA0C26BF34F5 /* Sources */,
+				BB6DA4BF194AF29D388A774EDEEECCF8 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				38D4F290F8B745EA6A5D2BAE6A1BF662 /* PBXTargetDependency */,
-				D5C273DFA4698D61BFEAA32C0AFA07DD /* PBXTargetDependency */,
-				8D0A481241AB1D0FB7D5D8132BB200E4 /* PBXTargetDependency */,
+				A8F8CF976959D2DAF3635541F9CDD7AF /* PBXTargetDependency */,
+				8561F54D49261D0CD32CC5C9B099788D /* PBXTargetDependency */,
 			);
-			name = "Pods-InstagramTests";
-			productName = "Pods-InstagramTests";
-			productReference = D5B0FDC238341E9C607178E4AB12CC26 /* libPods-InstagramTests.a */;
+			name = "Pods-Instagram";
+			productName = "Pods-Instagram";
+			productReference = E0ACD4CD950EFC3866036D8E66A476F5 /* libPods-Instagram.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D6EF2EE752CB215D9DD3C027899301FC /* Parse */ = {
@@ -1897,8 +1897,8 @@
 				26BF235B420589570D8C83E44CF0C52A /* Bolts */,
 				D6EF2EE752CB215D9DD3C027899301FC /* Parse */,
 				7280F5058E71F852EC60F38DC3F8F09E /* Parse-Parse */,
-				17AAF97ED69CFEDD163BC1796F5FA3BC /* Pods-Instagram */,
-				C28A8D46A780965598A41AB4D9E0AC6D /* Pods-InstagramTests */,
+				B31E9474BF0BC542BCAD9B97B60E9C46 /* Pods-Instagram */,
+				66EEBAB671C1F1E9F0E5617A02259B1B /* Pods-InstagramTests */,
 				7DA947D749D92ECE37A17BDA73571A1C /* Pods-InstagramUITests */,
 			);
 		};
@@ -1916,11 +1916,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1B9226A7BDEE3AE6FDCFFD55CF7C8A75 /* Sources */ = {
+		2A111A0E7E24EC224BECAA0C26BF34F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DB6C2BEF2E78EE3E6815B44F3E18FEC /* Pods-InstagramTests-dummy.m in Sources */,
+				1668A80E928DAE92D750D698D264DD4C /* Pods-Instagram-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2102,11 +2102,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D64F2DDDD3BD7950E74D16FA7AD47EF5 /* Sources */ = {
+		B12187707F47BF4A6A23E6B2141143FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16E5763488C868BD840F2DFFE632F75D /* Pods-Instagram-dummy.m in Sources */,
+				1736F2F30848F65EB6098D70AF008B1E /* Pods-InstagramTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2134,12 +2134,6 @@
 			target = 26BF235B420589570D8C83E44CF0C52A /* Bolts */;
 			targetProxy = CD4345D2753851640EB6BC0144824B48 /* PBXContainerItemProxy */;
 		};
-		38D4F290F8B745EA6A5D2BAE6A1BF662 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Bolts;
-			target = 26BF235B420589570D8C83E44CF0C52A /* Bolts */;
-			targetProxy = 392CDF6EA803ADB685D3ABB973626B96 /* PBXContainerItemProxy */;
-		};
 		458D901C5E974400F5E9E5E4012C2199 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Parse-Parse";
@@ -2149,20 +2143,26 @@
 		6D3A478EFEE0CEEB70C9120AFB2C0774 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Instagram";
-			target = 17AAF97ED69CFEDD163BC1796F5FA3BC /* Pods-Instagram */;
+			target = B31E9474BF0BC542BCAD9B97B60E9C46 /* Pods-Instagram */;
 			targetProxy = D83616937A82C2599CBD7A7B7FEE714A /* PBXContainerItemProxy */;
 		};
-		8D0A481241AB1D0FB7D5D8132BB200E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-Instagram";
-			target = 17AAF97ED69CFEDD163BC1796F5FA3BC /* Pods-Instagram */;
-			targetProxy = 29455B6391269B925D9C994B8E42788B /* PBXContainerItemProxy */;
-		};
-		D5C273DFA4698D61BFEAA32C0AFA07DD /* PBXTargetDependency */ = {
+		8561F54D49261D0CD32CC5C9B099788D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Parse;
 			target = D6EF2EE752CB215D9DD3C027899301FC /* Parse */;
-			targetProxy = 81C53062AB431F652E866AB51DE21821 /* PBXContainerItemProxy */;
+			targetProxy = 73FD4283066F983C8F42D1E4DDA74CF9 /* PBXContainerItemProxy */;
+		};
+		A8F8CF976959D2DAF3635541F9CDD7AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Bolts;
+			target = 26BF235B420589570D8C83E44CF0C52A /* Bolts */;
+			targetProxy = 59EA803D8065DEEC1939FEFFE8521ABC /* PBXContainerItemProxy */;
+		};
+		E243F644A44BB08048DBB70916031E69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Instagram";
+			target = B31E9474BF0BC542BCAD9B97B60E9C46 /* Pods-Instagram */;
+			targetProxy = 8649A8E9ABF0463CFFB780431B75BF58 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2207,29 +2207,6 @@
 			};
 			name = Release;
 		};
-		2C260FAFD530B48CFB2FCE4C4BD25D06 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F82A6FB660076FF731171E9ADB4013DF /* Pods-Instagram.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		5B708E51812D5A5049713E51E7D036D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C9800A132A56046CB3839C4118D9FD1B /* Pods-InstagramUITests.release.xcconfig */;
@@ -2253,9 +2230,9 @@
 			};
 			name = Release;
 		};
-		5CFFC6A6CFB70D9639480D7E394EF193 /* Debug */ = {
+		655AED01BBDBF897F344C18272537E04 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F54B67AE1FFB39668DADFBAA372A3D61 /* Pods-InstagramTests.debug.xcconfig */;
+			baseConfigurationReference = AE636C94431CA016C177880CBBC72115 /* Pods-InstagramTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2272,8 +2249,32 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
+		};
+		65D22B0F676436CEE9F9087777C38025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F82A6FB660076FF731171E9ADB4013DF /* Pods-Instagram.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		6DD2CC26E5CE8476C15B67CD13C59256 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2338,7 +2339,7 @@
 			};
 			name = Release;
 		};
-		866F92CEC7259A1D777BB4E3BE3FAB5A /* Debug */ = {
+		700BF5CDBB7D6B749DD123A3A4F78376 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 30B7DB7196EFB18A4B8F7865AB33C039 /* Pods-Instagram.debug.xcconfig */;
 			buildSettings = {
@@ -2526,9 +2527,9 @@
 			};
 			name = Release;
 		};
-		FE5298A59BD4144460DC3A850DB356A3 /* Release */ = {
+		D242486F3DF676ABE010451C3EF6A253 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE636C94431CA016C177880CBBC72115 /* Pods-InstagramTests.release.xcconfig */;
+			baseConfigurationReference = F54B67AE1FFB39668DADFBAA372A3D61 /* Pods-InstagramTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -2545,9 +2546,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -2579,15 +2579,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		409D937D7A0AF62F1573B7DFC00D54ED /* Build configuration list for PBXNativeTarget "Pods-InstagramTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5CFFC6A6CFB70D9639480D7E394EF193 /* Debug */,
-				FE5298A59BD4144460DC3A850DB356A3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		682644001980638869A8B23913D39528 /* Build configuration list for PBXNativeTarget "Pods-InstagramUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2597,20 +2588,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC3FB6C9071AAE4CE24323144A4F9131 /* Build configuration list for PBXNativeTarget "Pods-Instagram" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				866F92CEC7259A1D777BB4E3BE3FAB5A /* Debug */,
-				2C260FAFD530B48CFB2FCE4C4BD25D06 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B07DCE386B8BB46091D0B09473BA355B /* Build configuration list for PBXNativeTarget "Parse-Parse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0314881F66113BAD3233AF8525EC3F06 /* Debug */,
 				7003E6423B2294991FDB2D001B4F0FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B40781DF8E498D958481F60E7C2D2518 /* Build configuration list for PBXNativeTarget "Pods-InstagramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D242486F3DF676ABE010451C3EF6A253 /* Debug */,
+				655AED01BBDBF897F344C18272537E04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF77771D6E29CF276E7258E107C7C491 /* Build configuration list for PBXNativeTarget "Pods-Instagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				700BF5CDBB7D6B749DD123A3A4F78376 /* Debug */,
+				65D22B0F676436CEE9F9087777C38025 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
