@@ -35,10 +35,10 @@
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
             // Todo - segue
-            [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
         } else {
             NSLog(@"User registered successfully");
- 
+            [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
+  
         }
     }];
 }
@@ -50,11 +50,12 @@
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
         if (error != nil) {
             NSLog(@"User log in failed: %@", error.localizedDescription);
-            [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
+           
         } else {
             NSLog(@"User logged in successfully");
-
+            [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
         }
+        
     }];
 }
 
