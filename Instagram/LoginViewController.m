@@ -12,7 +12,6 @@
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextFeild;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextFeild;
-@property (weak, nonatomic) IBOutlet UITextField *emailTextFeild;
 - (IBAction)loginUser:(id)sender;
 - (IBAction)registerUser:(id)sender;
 
@@ -30,12 +29,13 @@
     PFUser *newUser = [PFUser user];
     
     newUser.username = self.usernameTextFeild.text;
-    newUser.email = self.emailTextFeild.text;
     newUser.password = self.passwordTextFeild.text;
     
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
+            // Todo - segue
+            [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
         } else {
             NSLog(@"User registered successfully");
  
@@ -50,6 +50,7 @@
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
         if (error != nil) {
             NSLog(@"User log in failed: %@", error.localizedDescription);
+            [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
         } else {
             NSLog(@"User logged in successfully");
 
@@ -58,7 +59,7 @@
 }
 
 - (IBAction)registerUser:(id)sender {
-    if([self.usernameTextFeild.text isEqual:@""] || [self.passwordTextFeild.text isEqual:@""] ||[self.emailTextFeild.text isEqual:@""]){
+    if([self.usernameTextFeild.text isEqual:@""] || [self.passwordTextFeild.text isEqual:@""] ){
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Title"
                                                                                message:@"Message"
                                                                         preferredStyle:(UIAlertControllerStyleAlert)];
@@ -85,7 +86,7 @@
 }
 
 - (IBAction)loginUser:(id)sender {
-    if (![self.usernameTextFeild.text isEqual:@""] || ![self.passwordTextFeild.text isEqual:@""]){
+    if ([self.usernameTextFeild.text isEqual:@""] || [self.passwordTextFeild.text isEqual:@""]){
 
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Title"
                                                                                message:@"Message"
@@ -113,6 +114,7 @@
         [self loginUser];
     }
 }
+
 
 
 
