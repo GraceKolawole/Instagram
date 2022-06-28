@@ -76,7 +76,7 @@
         <!--Home Feed-->
         <scene sceneID="kJk-by-WNn">
             <objects>
-                <viewController id="odO-bg-KMR" sceneMemberID="viewController">
+                <viewController id="odO-bg-KMR" customClass="FeedViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mn3-Ap-ASa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +110,7 @@
                     <navigationItem key="navigationItem" title="Home Feed" id="VL6-CX-LQV">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="rCg-xP-rQI">
                             <connections>
-                                <action selector="didTapLogout:" destination="fDO-jq-fNo" id="TPk-cj-eyI"/>
+                                <action selector="didTapLogout:" destination="odO-bg-KMR" id="Y6t-Zs-wm1"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="yXQ-Ug-zNd">
@@ -122,7 +122,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QiD-24-moh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="fDO-jq-fNo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2251" y="335"/>
         </scene>

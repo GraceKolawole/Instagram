@@ -10,12 +10,16 @@
 #import "SceneDelegate.h"
 #import "LoginViewController.h"
 
-@interface FeedViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface FeedViewController ()
 
 @end
 
 @implementation FeedViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+}
 - (IBAction)didTapLogout:(id)sender {
     
     SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
@@ -28,12 +32,9 @@
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
         // PFUser.current() will now be nil
     }];
+    //[self performSegueWithIdentifier:@"FirstSegue" sender:nil];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
 
 /*
@@ -45,5 +46,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end
