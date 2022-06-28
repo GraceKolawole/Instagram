@@ -76,11 +76,7 @@
     [alert addAction:okAction];
     [self presentViewController:alert animated:YES completion:^{
     }];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert
-                                                                                 animated:YES
-                                                                               completion:^{
-                                                                                       
-    }];
+    
     }
     else{
         [self registerUser];
@@ -111,8 +107,6 @@
     [self presentViewController:alert animated:YES completion:^{
 
     }];
-        
-
         
     }
     else{
