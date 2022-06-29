@@ -28,6 +28,7 @@
 #import "PFURLSessionCommandRunner.h"
 #import "PFPersistenceController.h"
 #import "ParseManagerPrivate.h"
+#import "Parse/Parse.h"
 
 #if !TARGET_OS_WATCH
 #import "PFPushManager.h"

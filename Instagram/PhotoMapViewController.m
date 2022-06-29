@@ -6,11 +6,12 @@
 //
 
 #import "PhotoMapViewController.h"
+#import "Post.h"
 
 @interface PhotoMapViewController ()  <UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) UIImage *postImage;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageview;
-
+@property (weak, nonatomic) IBOutlet UITextField *captionTextFeild;
 
 @end
 
@@ -84,6 +85,24 @@
     UIGraphicsEndImageContext();
     
     return newImage;
+}
+
+- (IBAction)didTapShare:(id)sender {
+    Post *post = [Post new];
+    PFFileObject *imageFile = [PFFileObject fileObjectWithName:@"image.png" data:UIImagePNGRepresentation(self.photoImageview.image)];
+    post.image = imageFile;
+    post.caption = self.captionTextFeild.text;
+    
+    [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if(error != nil){
+            NSLog(@"User share failed: %@", error.localizedDescription);
+           
+        } else {
+            NSLog(@"User successfully shared post");
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }];
+    
 }
 
 @end
