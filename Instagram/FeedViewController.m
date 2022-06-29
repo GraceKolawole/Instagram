@@ -9,16 +9,68 @@
 #import "Parse/Parse.h"
 #import "SceneDelegate.h"
 #import "LoginViewController.h"
+#import "InstagramPostCell.h"
+#import "Post.h"
+#import "AppDelegate.h"
+#import "PFImageView.h"
 
-@interface FeedViewController ()
-
+@interface FeedViewController ()<UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *postsArray;
+@property (strong, nonatomic) Post *post;
+@property(nonatomic, strong) UIRefreshControl *refreshControl;
 @end
 
 @implementation FeedViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.refreshControl = [[UIRefreshControl alloc] init];
+
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+
+    [self.refreshControl addTarget:self action: @selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:self.refreshControl atIndex:0];
+
+    // Server fetch
+    PFQuery *postQuery = [Post query];
+    [postQuery orderByDescending:@"createdAt"];
+    [postQuery includeKey:@"author"];
+    postQuery.limit = 20;
+
+    [postQuery findObjectsInBackgroundWithBlock:^(NSArray<Post *> * _Nullable posts, NSError * _Nullable error) {
+        if (posts) {
+            self.postsArray = (NSMutableArray *)posts;
+            [self.tableView reloadData];
+        }
+        else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+
+}
+-(void)beginRefresh: (UIRefreshControl *)UIRefreshControl {
+    
+    [self.refreshControl beginRefreshing];
+    
+    PFQuery *postQuery = [Post query];
+    [postQuery orderByDescending:@"createdAt"];
+    [postQuery includeKey:@"author"];
+    postQuery.limit = 20;
+
+    [postQuery findObjectsInBackgroundWithBlock:^(NSArray<Post *> * _Nullable posts, NSError * _Nullable error) {
+        if (posts) {
+            self.postsArray = (NSMutableArray *)posts;
+            [self.tableView reloadData];
+        }
+        else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+
+    
 }
 - (IBAction)didTapLogout:(id)sender {
     
@@ -34,7 +86,27 @@
     }];
     //[self performSegueWithIdentifier:@"FirstSegue" sender:nil];
 }
+//- (void)setPost:(Post *)post; {
+//    _post = post;
+//
+//}
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    InstagramPostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InstagramPostCell"];
+    
+    Post *post = self.postsArray[indexPath.row];
+    
+    cell.post = post;
+    
+    cell.photoImageView.file = post[@"image"];
+    [cell.photoImageView loadInBackground];
+    
+//    cell.photoImageView.file = post.image;
+    return cell;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.postsArray count];
+}
 
 
 /*
