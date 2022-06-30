@@ -26,29 +26,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    InstagramPostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InstagramPostCell"];
+    //self.pictureImageView.file = self.post[@"image"];
     
-    Post *post = self.postsArray[indexPath.row];
-    
-    cell.post = post;
-    
-    cell.pictureImageView.file = post[@"image"];
-    [cell.pictureImageView loadInBackground];
 
+    self.photoImageView.file = self.post[@"image"];
+    [self.photoImageView loadInBackground];
     
-    cell.captionTextLabel.text = post.caption;
-    cell.nameLabel.text = post.author.username;
-    cell.userLabel.text = post.author.username;
+    self.captionLabel.text = self.post.caption;
+    self.nameLabel.text = self.post.author.username;
+    self.userLabel.text = self.post.author.username;
     
-    cell.dateLabel.text = [post.createdAt shortTimeAgoSinceNow];
-    cell.likeCountLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];
-//    cell.photoImageView.file = post.image;
-    return cell;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.postsArray count];
+    self.dateLabel.text = [self.post.createdAt shortTimeAgoSinceNow];
+
+   
+    //    self.likeCountLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];
 }
 
 @end

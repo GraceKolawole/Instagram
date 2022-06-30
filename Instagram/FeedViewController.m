@@ -21,7 +21,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *postsArray;
 @property (strong, nonatomic) Post *post;
-@property(nonatomic, strong) UIRefreshControl *refreshControl;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (strong, nonatomic) Post *profilepicture;
+
 @end
 
 @implementation FeedViewController
@@ -52,12 +54,16 @@
             NSLog(@"%@", error.localizedDescription);
         }
     }];
-
 }
 -(void)beginRefresh: (UIRefreshControl *)UIRefreshControl {
     
     [self.refreshControl beginRefreshing];
     
+    
+    // get the current user
+    // set the user image
+    // set the property
+
     PFQuery *postQuery = [Post query];
     [postQuery orderByDescending:@"createdAt"];
     [postQuery includeKey:@"author"];
@@ -72,7 +78,7 @@
             NSLog(@"%@", error.localizedDescription);
         }
     }];
-
+    [self.refreshControl endRefreshing];
     
 }
 - (IBAction)didTapLogout:(id)sender {
@@ -89,10 +95,7 @@
     }];
     //[self performSegueWithIdentifier:@"FirstSegue" sender:nil];
 }
-//- (void)setPost:(Post *)post; {
-//    _post = post;
-//
-//}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     InstagramPostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InstagramPostCell"];
@@ -121,17 +124,17 @@
 }
 
 
+
 //// In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    NSLog(@"In the prepareForSegue");
-//    if ([[segue identifier] isEqualToString:@"DetailsSegue"]) {
-//        NSLog(@"This is the detail segue");
-//        InstagramPostCell *post = (InstagramPostCell *)sender;
-////        Post *post = cell.post;
-//        DetailViewController *detailVC = [segue destinationViewController];
-//        detailVC.post = post;
-//
-//    }
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"In the prepareForSegue");
+    if ([[segue identifier] isEqualToString:@"DetailsSegue"]) {
+        NSLog(@"This is the detail segue");
+        InstagramPostCell *cell = (InstagramPostCell *)sender;
+        Post *post = cell.post;
+        DetailViewController *detailVC = [segue destinationViewController];
+        detailVC.post = post;
+    }
+}
 
 @end
