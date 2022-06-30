@@ -7,6 +7,9 @@
 
 #import "PhotoMapViewController.h"
 #import "Post.h"
+#import "LoginViewController.h"
+#import "SceneDelegate.h"
+#import "FeedViewController.h"
 
 @interface PhotoMapViewController ()  <UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) UIImage *postImage;
@@ -99,5 +102,17 @@
             }
     }];
     }
+- (IBAction)didTapCancel:(id)sender {
+    SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    FeedViewController *feedViewController = [storyboard instantiateViewControllerWithIdentifier:@"FeedViewController"];
+    
+    sceneDelegate.window.rootViewController = feedViewController;
+    
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        // PFUser.current() will now be nil
+    }];
+}
 
 @end

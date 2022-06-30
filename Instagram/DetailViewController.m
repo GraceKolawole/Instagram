@@ -40,6 +40,7 @@
     
     cell.captionTextLabel.text = post.caption;
     cell.nameLabel.text = post.author.username;
+    cell.userLabel.text = post.author.username;
     
     cell.dateLabel.text = [post.createdAt shortTimeAgoSinceNow];
     cell.likeCountLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];

@@ -105,7 +105,7 @@
     [cell.photoImageView loadInBackground];
     
     cell.pictureImageView.file = post[@"image"];
-    [cell.pictureImageView loadInBackground];
+    
     
     cell.captionTextLabel.text = post.caption;
     cell.userLabel.text = post.author.username;
@@ -121,7 +121,7 @@
 }
 
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"In the prepareForSegue");
     if ([[segue identifier] isEqualToString:@"DetailsSegue"]) {
