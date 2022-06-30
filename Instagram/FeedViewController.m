@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 #import "PFImageView.h"
 #import "DateTools.h"
+#import "DetailViewController.h"
 
 
 @interface FeedViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -120,13 +121,17 @@
 }
 
 
-/*
-#pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSLog(@"In the prepareForSegue");
+    if ([[segue identifier] isEqualToString:@"DetailsSegue"]) {
+        NSLog(@"This is the detail segue");
+        InstagramPostCell *post = (InstagramPostCell *)sender;
+//        Post *post = cell.post;
+        DetailViewController *detailVC = [segue destinationViewController];
+        detailVC.post = post;
+    
+    }
 }
-*/
+
 @end

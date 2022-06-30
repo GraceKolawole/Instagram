@@ -6,8 +6,18 @@
 //
 
 #import "DetailViewController.h"
+#import "FeedViewController.h"
+#import "InstagramPostCell.h"
+#import "LoginViewController.h"
+#import "DateTools.h"
+#import "PFImageView.h"
+#import "Post.h"
+#import "Parse/Parse.h"
 
 @interface DetailViewController ()
+
+@property (nonatomic, strong) NSMutableArray *postsArray;
+
 
 @end
 
@@ -17,15 +27,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    InstagramPostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InstagramPostCell"];
+    
+    Post *post = self.postsArray[indexPath.row];
+    
+    cell.post = post;
+    
+    cell.pictureImageView.file = post[@"image"];
+    [cell.pictureImageView loadInBackground];
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    cell.captionTextLabel.text = post.caption;
+    cell.nameLabel.text = post.author.username;
+    
+    cell.dateLabel.text = [post.createdAt shortTimeAgoSinceNow];
+    cell.likeCountLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];
+//    cell.photoImageView.file = post.image;
+    return cell;
 }
-*/
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.postsArray count];
+}
 
 @end

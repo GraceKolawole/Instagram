@@ -198,7 +198,7 @@
                                             <outlet property="photoImageView" destination="QWQ-BJ-5b5" id="6tz-IV-WP9"/>
                                             <outlet property="pictureImageView" destination="HyQ-71-c4d" id="Cji-dD-KHt"/>
                                             <outlet property="userLabel" destination="A4R-rV-bM9" id="OVd-LO-nua"/>
-                                            <segue destination="wbN-4p-8Uz" kind="show" id="1dT-Ax-01i"/>
+                                            <segue destination="wbN-4p-8Uz" kind="show" identifier="DetailsSegue" id="dwc-ra-TCQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -328,7 +328,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="406" height="703"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-19-f6E">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-19-f6E" customClass="PFImageView">
                                                 <rect key="frame" x="0.0" y="8" width="212" height="195"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -347,22 +347,22 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDk-B7-Q6M">
-                                                <rect key="frame" x="23" y="257" width="67" height="31"/>
+                                                <rect key="frame" x="34" y="258" width="46" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L33-Nm-oW0">
-                                                <rect key="frame" x="145" y="257" width="67" height="31"/>
+                                                <rect key="frame" x="156" y="258" width="47" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="message" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhV-cs-qOy">
-                                                <rect key="frame" x="282" y="257" width="67" height="31"/>
+                                                <rect key="frame" x="294" y="258" width="45" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOG-3f-76l">
                                                 <rect key="frame" x="220" y="65" width="95" height="42"/>
@@ -383,10 +383,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="lEK-dC-gYP"/>
+                    <connections>
+                        <outlet property="captionLabel" destination="iOG-3f-76l" id="AOK-Gl-keH"/>
+                        <outlet property="dateLabel" destination="2c2-Lc-8Wr" id="OZE-XY-Zga"/>
+                        <outlet property="nameLabel" destination="fHa-m8-ebc" id="Gu8-Cn-v3w"/>
+                        <outlet property="pictureImageView" destination="MEH-19-f6E" id="wrS-2g-jnc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fo-tK-PDz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3464" y="1068"/>
+            <point key="canvasLocation" x="3463.7681159420295" y="1067.4107142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Tnd-U2-24U">
@@ -465,7 +471,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1dT-Ax-01i"/>
+        <segue reference="dwc-ra-TCQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="feed_tab" width="25" height="25"/>
