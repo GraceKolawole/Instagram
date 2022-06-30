@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,6 @@
 		9530A0E8286AD40B0053ABDF /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9530A0E7286AD40B0053ABDF /* FeedViewController.m */; };
 		9530A0F0286BA5930053ABDF /* PhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9530A0EF286BA5930053ABDF /* PhotoMapViewController.m */; };
 		9530A0F3286BB7720053ABDF /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 9530A0F2286BB7720053ABDF /* Post.m */; };
-		953F06EE286E0FAE009BD594 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 953F06ED286E0FAE009BD594 /* DetailViewController.m */; };
 		956655B8286CC84700E957A5 /* InstagramPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 956655B7286CC84700E957A5 /* InstagramPostCell.m */; };
 		956655BB286D0EB600E957A5 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 956655BA286D0EB600E957A5 /* ComposeViewController.m */; };
 		959DE755286A47AD00B04D28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959DE754286A47AD00B04D28 /* AppDelegate.m */; };
@@ -66,8 +65,6 @@
 		9530A0EF286BA5930053ABDF /* PhotoMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoMapViewController.m; sourceTree = "<group>"; };
 		9530A0F1286BB7720053ABDF /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		9530A0F2286BB7720053ABDF /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
-		953F06EC286E0FAE009BD594 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		953F06ED286E0FAE009BD594 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		956655B6286CC84700E957A5 /* InstagramPostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstagramPostCell.h; sourceTree = "<group>"; };
 		956655B7286CC84700E957A5 /* InstagramPostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramPostCell.m; sourceTree = "<group>"; };
 		956655B9286D0EB600E957A5 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
@@ -181,8 +178,6 @@
 				956655B7286CC84700E957A5 /* InstagramPostCell.m */,
 				956655B9286D0EB600E957A5 /* ComposeViewController.h */,
 				956655BA286D0EB600E957A5 /* ComposeViewController.m */,
-				953F06EC286E0FAE009BD594 /* DetailViewController.h */,
-				953F06ED286E0FAE009BD594 /* DetailViewController.m */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -441,7 +436,6 @@
 				956655BB286D0EB600E957A5 /* ComposeViewController.m in Sources */,
 				959DE755286A47AD00B04D28 /* AppDelegate.m in Sources */,
 				959DE758286A47AD00B04D28 /* SceneDelegate.m in Sources */,
-				953F06EE286E0FAE009BD594 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

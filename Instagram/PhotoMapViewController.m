@@ -69,6 +69,7 @@
     // Do something with the images (based on your use case)
     UIImage *resizedImage = [self resizeImage:originalImage withSize:CGSizeMake(200, 200)];
     self.photoImageview.image = resizedImage;
+    //self.pictureImageView.image = resizedImage;
     // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -97,6 +98,6 @@
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
     }];
-}
+    }
 
 @end
