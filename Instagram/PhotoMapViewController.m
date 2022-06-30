@@ -88,21 +88,15 @@
 }
 
 - (IBAction)didTapShare:(id)sender {
-    Post *post = [Post new];
-    PFFileObject *imageFile = [PFFileObject fileObjectWithName:@"image.png" data:UIImagePNGRepresentation(self.photoImageview.image)];
-    post.image = imageFile;
-    post.caption = self.captionTextFeild.text;
-    
-    [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        if(error != nil){
-            NSLog(@"User share failed: %@", error.localizedDescription);
-           
-        } else {
-            NSLog(@"User successfully shared post");
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
+    [Post postUserImage:self.photoImageview.image withCaption:self.captionTextFeild.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+            if(error != nil){
+                NSLog(@"User share failed: %@", error.localizedDescription);
+               
+            } else {
+                NSLog(@"User successfully shared post");
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
     }];
-    
 }
 
 @end

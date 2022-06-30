@@ -13,6 +13,8 @@
 #import "Post.h"
 #import "AppDelegate.h"
 #import "PFImageView.h"
+#import "DateTools.h"
+
 
 @interface FeedViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -101,6 +103,10 @@
     cell.photoImageView.file = post[@"image"];
     [cell.photoImageView loadInBackground];
     
+    cell.captionTextLabel.text = post.caption;
+    cell.userLabel.text = post.author.username;
+    cell.dateLabel.text = [post.createdAt shortTimeAgoSinceNow];
+    cell.likeCountLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];
 //    cell.photoImageView.file = post.image;
     return cell;
 }
