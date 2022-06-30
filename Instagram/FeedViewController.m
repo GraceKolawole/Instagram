@@ -108,7 +108,7 @@
     [cell.photoImageView loadInBackground];
     
     cell.pictureImageView.file = post[@"image"];
-    
+    [cell.pictureImageView loadInBackground];
     
     cell.captionTextLabel.text = post.caption;
     cell.userLabel.text = post.author.username;

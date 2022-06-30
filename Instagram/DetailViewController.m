@@ -36,6 +36,9 @@
     self.nameLabel.text = self.post.author.username;
     self.userLabel.text = self.post.author.username;
     
+    self.pictureImageView.file = self.post[@"image"];
+    [self.pictureImageView loadInBackground];
+    
     self.dateLabel.text = [self.post.createdAt shortTimeAgoSinceNow];
 
    
