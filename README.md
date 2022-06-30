@@ -44,11 +44,10 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories:![ezgif com-gif-maker](https://user-images.githubusercontent.com/107007242/176797243-17351203-fed1-4192-a30f-a6e6aa894c48.gif)
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [Kap](https://getkap.co/).
+
 
 ## Credits
 
