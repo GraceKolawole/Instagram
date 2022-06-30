@@ -122,16 +122,16 @@
 
 
 //// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"In the prepareForSegue");
-    if ([[segue identifier] isEqualToString:@"DetailsSegue"]) {
-        NSLog(@"This is the detail segue");
-        InstagramPostCell *post = (InstagramPostCell *)sender;
-//        Post *post = cell.post;
-        DetailViewController *detailVC = [segue destinationViewController];
-        detailVC.post = post;
-    
-    }
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    NSLog(@"In the prepareForSegue");
+//    if ([[segue identifier] isEqualToString:@"DetailsSegue"]) {
+//        NSLog(@"This is the detail segue");
+//        InstagramPostCell *post = (InstagramPostCell *)sender;
+////        Post *post = cell.post;
+//        DetailViewController *detailVC = [segue destinationViewController];
+//        detailVC.post = post;
+//
+//    }
+//}
 
 @end
