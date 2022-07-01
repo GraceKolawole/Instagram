@@ -15,7 +15,7 @@
 #import "PFImageView.h"
 #import "DateTools.h"
 #import "DetailViewController.h"
-
+#import "ProfileViewController.h"
 
 @interface FeedViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -136,5 +136,16 @@
         detailVC.post = post;
     }
 }
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    NSLog(@"In the prepareForSegue");
+//    if ([[segue identifier] isEqualToString:@"ProfileSegue"]) {
+//        NSLog(@"This is the detail segue");
+//        InstagramPostCell *cell = (InstagramPostCell *)sender;
+//        Post *post = cell.post;
+//        ProfileViewController *detailVC = [segue destinationViewController];
+//        detailVC.post = post;
+//    }
+//}
 
 @end
